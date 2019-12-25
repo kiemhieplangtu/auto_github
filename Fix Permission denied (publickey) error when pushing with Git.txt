@@ -1,0 +1,18 @@
+1. Type:
+>> cd ~/.ssh
+This will take you to the root directory for Git
+
+2. To create the SSH keys, type:
+>> ssh-keygen -t rsa -C "nguyenvanhiepiop@gmail.com".
+This will create both id_rsa and id_rsa.pub files.
+
+3.  open id_rsa.pub in your favorite text editor
+>> vi id_rsa.pub
+
+4. Copy the contents--exactly as it appears, with no extra spaces or lines--of id_rsa.pub and paste it into GitHub and/or BitBucket under the Account Settings > SSH Keys.
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY0qd1aHhNj2z5/KzSWZLntoYsYSKosjeBKsgvQSSrxen6ldu0pBXx/4aGeC9RD5mj+vmh3RA1vwWPtt/qWLt1oIGH4u5oxuL4DtSv6+rTP+E3mTq0OnBykh7Fsn7hMYJM9p1ICYSIFPE6X7RbuFESmc0t4cv1wlUcHPZjHTry4Q+p5hJNdjKrVG7+F+kVRgG8Y1XK/72FjRoPSq3izyK6ePHAv0Me7q98zRAka0inKQgxt2G2ny3q+0e2rs/+pyDS9BW2iuPX6tO51xWAkRHsREtSKJOiBWF6M9LT62JQljGN8fCcdVQF5OqaIOuksmsFrrjY6vT6zq/yTu7yfykz nguyenvanhiepiop@gmail.com
+
+https://github.com/settings/keys
+
+5. Now that you've added your public key to Github and/or BitBucket, try to git push again and see if it works. It should!

@@ -1,0 +1,42 @@
+#!/bin/bash
+# A bash script to run python scripts, by Hiep.
+# 1. run: source ~/.my_commands.sh
+# 2. then type create (the function below) on Terminal
+
+# 3. Install github for Python:
+#    pip install PyGithub
+
+# 3. Install selenium for Python:
+#    pip install selenium
+
+
+
+function create_git() {
+	cd $HOME/Phd@MQ/projects/github/
+	echo '-> Running file: create.py'
+	echo '...'
+	python create.py $1
+	echo ' '
+	cd $HOME/projects/$1/
+	echo $1 >> README.md
+	git init
+	# git add README.md
+	git add .
+	git commit -m "first commit"
+	git remote add origin git@github.com:kiemhieplangtu/$1.git
+	# touch README.md
+    # git remote add origin https://github.com/kiemhieplangtu/$1.git
+	git push -u origin master
+	echo 'Completed !'
+}
+
+
+
+function remove_git() {
+	cd $HOME/Phd@MQ/projects/github/
+	echo '-> Running file: remove.py'
+	echo '...'
+	python remove_git.py $1
+	echo ' '
+	echo 'Completed !'
+}

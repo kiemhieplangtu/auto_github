@@ -1,0 +1,12 @@
+selenium
+PyGithub
+
+
+# 1. run: source ~/.my_commands.sh
+# 2. then type create (the function below) on Terminal
+
+# 3. Install github for Python:
+#    pip install PyGithub
+
+# 3. Install selenium for Python:
+#    pip install selenium
