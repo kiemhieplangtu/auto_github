@@ -1,0 +1,8 @@
+Note: root directory: home/projects/
+-> Create a git-repo from Terminal
+1. run: source ~/.my_commands.sh
+2. create_git <repo_name>
+
+-> Remove a git_repo from Terminal
+1. source ~/.my_commands.sh
+2. remove_git <repo_name>
