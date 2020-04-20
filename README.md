@@ -1,2 +1,1 @@
 auto_github
-Gaussfit
