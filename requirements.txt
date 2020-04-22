@@ -1,5 +1,6 @@
 selenium
 PyGithub
+webdriver-manager
 
 
 # 1. run: source ~/.my_commands.sh
@@ -10,3 +11,10 @@ PyGithub
 
 # 3. Install selenium for Python:
 #    pip install selenium
+
+
+pip install webdriver-manager
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(ChromeDriverManager().install())

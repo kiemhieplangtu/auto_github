@@ -21,7 +21,7 @@ def create():
 	'''
 	path     = os.getenv('HOME')+'/projects/'
 
-	username = 'kiemhieplangtu'
+	username = 'nv-hiep'
 	password = 'Hoanglaota08101988'
 
 	folder   = str( sys.argv[1] )

@@ -12,6 +12,8 @@ import sys, os
 from   selenium                          import webdriver
 from   selenium.webdriver.chrome.options import Options
 
+from   webdriver_manager.chrome          import ChromeDriverManager
+
 
 
 def remove():
@@ -22,7 +24,7 @@ def remove():
 
 	path     = os.getenv('HOME')+'/projects/'
 
-	username = 'kiemhieplangtu'
+	username = 'nv-hiep'
 	password = 'Hoanglaota08101988'
 
 	repo     = str( sys.argv[1] )
@@ -45,7 +47,8 @@ def remove():
 		chrome_options = webdriver.ChromeOptions()
 		chrome_options.add_argument("--incognito")
 		global browser # this will prevent the browser variable from being garbage collected
-		browser = webdriver.Chrome(os.getenv('HOME')+'/program/chromedriver_linux64/chromedriver')
+		# browser = webdriver.Chrome(os.getenv('HOME')+'/program/chromedriver_linux64/chromedriver')
+		browser = webdriver.Chrome(ChromeDriverManager().install())
 		# browser.set_window_size(1800, 900)
 		browser.get('https://github.com/login')
 		# browser.find_element(By.NAME, 'username').send_keys('MYEMAIL', Keys.TAB, 'MYPW', Keys.ENTER)
